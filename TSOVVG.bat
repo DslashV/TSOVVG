@@ -1,7 +1,7 @@
 @echo off
 mode 120, 30
 SETLOCAL ENABLEDELAYEDEXPANSION
-title Not Serious Oscilloscope View Video Generator - by heeminwelcome1@gmail.com
+title Truly Simple Oscilloscope View Video Generator - by D/V
 "!__APPDIR__!chcp.com" 65001 >nul
 CALL :resetvariables
 CALL :LOADINICONFIGFILE "%~1"
@@ -713,33 +713,21 @@ IF "!NSOVVGVERSION:a=!" NEQ "!NSOVVGVERSION!" (
 
 cls
 IF DEFINED DISPLAYTOPTAB ( echo [90mNSOVVG Version !NSOVVGVERSION! by [4mheeminwelcome1@gmail.com[24m	[7m[5m_==[!displaytoptab!]==_[0m ) ELSE ( echo [90mNSOVVG Version !NSOVVGVERSION! by [4mheeminwelcome1@gmail.com[0m )
-echo    [1m[97m         ,--.              ,----..                                     	┌──────────[Current Settings]──────────┐
+echo 
 
-echo           ,--.'^| .--.--.     /   /   \                         ,----..    	│  [32mChosen Master Audio: !mastername![97m		│
-
-echo       ,--,:  : ^|/  /    '.  /   .     :       ,---.      ,---./   /   \   	│  [32mVideo Resolution:	[93m!x_res! x !y_res![97m		│
-
-echo    ,`--.'`^|  ' ^|  :  /`. / .   /   ;.  \     /__./^|     /__./^|   :     :  	│  [32mFPS:			[93m!fps!FPS[97m				│
-
-echo    ^|   :  :  ^| ;  ^|  ^|--` .   ;   /  ` ;,---.;  ; ^|,---.;  ; .   ^|  ;. /  	│  !imagename!		│
-
-echo    :   ^|   \ ^| ^|  :  ;_   ;   ^|  ; \ ; /___/ \  ^| /___/ \  ^| .   ; /--`   	│  [32mDisplay Mode: [93m!linemode! !lmwv1![97m	│
-
-echo    ^|   : '  '; ^|\  \    `.^|   :  ^| ; ^| \   ;  \ ' \   ;  \ ' ;   ^| ;  __  	│  [32mChosen Font:	[93m!displayfont![97m│
-
-echo    '   ' ;.    ; `----.   .   ^|  ' ' ' :\   \  \: ^|\   \  \: ^|   : ^|.' .' 	│  [32mFont Size:	[93m!sizefont![97m											│
-
-echo    ^|   ^| ^| \   ^| __ \  \  '   ;  \; /  ^| ;   \  ' . ;   \  ' .   ^| '_.' : 	│  [32mFont Color:	!displaycolorfont![97m												│
-
-echo    '   : ^|  ; .'/  /`--'  /\   \  ',  /   \   \   '  \   \   '   ; : \  ^| 	│  [32mChannel Array:[97m !displaychannelsorting![97m												│
-
-echo    ^|   ^| '`--' '--'.     /  ;   :    /     \   `  ;   \   `  '   ^| '/  .' 	│												│
-
-echo    '   : ^|       `--'---'    \   \ .'       :   \ ^|    :   \ ^|   :    /   	│												│
-
-echo    ;   ^|.'                    `---`          '---"      '---" \   \ .'    	└──────────────────────────────────────┘
-echo    '---'                                                       `---`      [0m
-echo.             Not Serious Oscilloscope View Video Generator
+echo  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------. 
+echo | .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
+echo | |  _________   | || |    _______   | || |     ____     | || | ____   ____  | || | ____   ____  | || |    ______    | |
+echo | | |  _   _  |  | || |   /  ___  |  | || |   .'    `.   | || ||_  _| |_  _| | || ||_  _| |_  _| | || |  .' ___  |   | |
+echo | | |_/ | | \_|  | || |  |  (__ \_|  | || |  /  .--.  \  | || |  \ \   / /   | || |  \ \   / /   | || | / .'   \_|   | |
+echo | |     | |      | || |   '.___`-.   | || |  | |    | |  | || |   \ \ / /    | || |   \ \ / /    | || | | |    ____  | |
+echo | |    _| |_     | || |  |`\____) |  | || |  \  `--'  /  | || |    \ ' /     | || |    \ ' /     | || | \ `.___]  _| | |
+echo | |   |_____|    | || |  |_______.'  | || |   `.____.'   | || |     \_/      | || |     \_/      | || |  `._____.'   | |
+echo | |              | || |              | || |              | || |              | || |              | || |              | |
+echo | '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
+echo  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------' 
+echo  [0m
+echo.             Truly Simple Oscilloscope View Video Generator
 echo.
 goto :EOF
 
@@ -1825,4 +1813,5 @@ SET /P dummyvariable1=<"!TEMP!\.tmp"
 DEL /Q "!TEMP!\.tmp"
 REM echo !dummyvariable1!
 for /f "tokens=*" %%a in ('powershell -command "$rgbString = \"%dummyvariable1%\";$rgbValues = $rgbString -split \"=\" | ForEach-Object { [convert]::ToString($_, 16).PadLeft(2, \"0\") };$hexColor = \"#\" + ($rgbValues -join \"\");Write-Host $hexColor"') do set "%~2=%%a"
+
 goto :eof
