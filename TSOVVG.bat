@@ -720,7 +720,8 @@ echo      \ \  \ \ \_____  \ \  \\\  \ \  \/  / / \ \  \/  / / \ \  \  ___
 echo       \ \  \ \|____|\  \ \  \\\  \ \    / /   \ \    / /   \ \  \|\  \ 
 echo        \ \__\  ____\_\  \ \_______\ \__/ /     \ \__/ /     \ \_______\
 echo         \|__| |\_________\|_______|\|__|/       \|__|/       \|_______|
-echo               \|_________|                                             
+echo               \|_________|                                         
+echo.
 echo.             Truly Simple Oscilloscope View Video Generator
 echo.
 goto :EOF
@@ -1809,6 +1810,7 @@ REM echo !dummyvariable1!
 for /f "tokens=*" %%a in ('powershell -command "$rgbString = \"%dummyvariable1%\";$rgbValues = $rgbString -split \"=\" | ForEach-Object { [convert]::ToString($_, 16).PadLeft(2, \"0\") };$hexColor = \"#\" + ($rgbValues -join \"\");Write-Host $hexColor"') do set "%~2=%%a"
 
 goto :eof
+
 
 
 
