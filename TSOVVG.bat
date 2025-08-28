@@ -713,14 +713,14 @@ IF "!NSOVVGVERSION:a=!" NEQ "!NSOVVGVERSION!" (
 
 cls
 IF DEFINED DISPLAYTOPTAB ( echo [90mNSOVVG Version !NSOVVGVERSION! by [D/V[24m	[7m[5m_==[!displaytoptab!]==_[0m ) ELSE ( echo [90mNSOVVG Version !NSOVVGVERSION! by [4mheeminwelcome1@gmail.com[0m )
-echo    _______   ______   _____     _     _    _     _    ______
-echo   /\_______)\/ ____/\ ) ___ (   /_/\ /\_\  /_/\ /\_\  /_/\___\
-echo   \(___  __\/) ) __\// /\_/\ \  ) ) ) ( (  ) ) ) ( (  ) ) ___/
-echo     / / /     \ \ \ / /_/ (_\ \/_/ / \ \_\/_/ / \ \_\/_/ /  ___
-echo    ( ( (      _\ \ \\ \ )_/ / /\ \ \_/ / /\ \ \_/ / /\ \ \_/\__\
-echo     \ \ \    )____) )\ \/_\/ /  \ \   / /  \ \   / /  )_)  \/ _/
-echo      /_/_/    \____\/  )_____(    \_\_/_/    \_\_/_/   \_\____/
-echo.
+echo  _________  ________  ________  ___      ___ ___      ___ ________     
+echo |\___   ___\\   ____\|\   __  \|\  \    /  /|\  \    /  /|\   ____\    
+echo \|___ \  \_\ \  \___|\ \  \|\  \ \  \  /  / | \  \  /  / | \  \___|    
+echo      \ \  \ \ \_____  \ \  \\\  \ \  \/  / / \ \  \/  / / \ \  \  ___  
+echo       \ \  \ \|____|\  \ \  \\\  \ \    / /   \ \    / /   \ \  \|\  \ 
+echo        \ \__\  ____\_\  \ \_______\ \__/ /     \ \__/ /     \ \_______\
+echo         \|__| |\_________\|_______|\|__|/       \|__|/       \|_______|
+echo               \|_________|                                             
 echo.             Truly Simple Oscilloscope View Video Generator
 echo.
 goto :EOF
@@ -1809,6 +1809,7 @@ REM echo !dummyvariable1!
 for /f "tokens=*" %%a in ('powershell -command "$rgbString = \"%dummyvariable1%\";$rgbValues = $rgbString -split \"=\" | ForEach-Object { [convert]::ToString($_, 16).PadLeft(2, \"0\") };$hexColor = \"#\" + ($rgbValues -join \"\");Write-Host $hexColor"') do set "%~2=%%a"
 
 goto :eof
+
 
 
 
