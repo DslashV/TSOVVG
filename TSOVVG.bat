@@ -712,7 +712,7 @@ IF "!NSOVVGVERSION:a=!" NEQ "!NSOVVGVERSION!" (
 ) else set "displaytoptab="
 
 cls
-IF DEFINED DISPLAYTOPTAB ( echo [90mNSOVVG Version !NSOVVGVERSION! by [4mheeminwelcome1@gmail.com[24m	[7m[5m_==[!displaytoptab!]==_[0m ) ELSE ( echo [90mNSOVVG Version !NSOVVGVERSION! by [4mheeminwelcome1@gmail.com[0m )
+IF DEFINED DISPLAYTOPTAB ( echo [90mNSOVVG Version !NSOVVGVERSION! by [D/V[24m	[7m[5m_==[!displaytoptab!]==_[0m ) ELSE ( echo [90mNSOVVG Version !NSOVVGVERSION! by [4mheeminwelcome1@gmail.com[0m )
 echo 
 
 echo  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------. 
@@ -1815,4 +1815,5 @@ REM echo !dummyvariable1!
 for /f "tokens=*" %%a in ('powershell -command "$rgbString = \"%dummyvariable1%\";$rgbValues = $rgbString -split \"=\" | ForEach-Object { [convert]::ToString($_, 16).PadLeft(2, \"0\") };$hexColor = \"#\" + ($rgbValues -join \"\");Write-Host $hexColor"') do set "%~2=%%a"
 
 goto :eof
+
 
