@@ -1,5 +1,5 @@
-﻿# NSOVVG - Not Serious Oscilloscope View Video Generator
-**NSOVVG** is a simple oscilloscope view video render that is written in batch script.
+﻿# TSOVVG - Truly Simple Oscilloscope View Video Generator
+**TSOVVG** is a simple oscilloscope view video render that is written in batch script.
 
 Although written in a poor programming language, it provides a pseudo-GUI by including user-friendly features such as a channel selection window and color picker.
 
@@ -13,3 +13,4 @@ Although written in a poor programming language, it provides a pseudo-GUI by inc
 - **Displays progress bar when rendering**.
 - Can use all of **FFmpeg's built-in showwaves display modes**.
 - Can import **VGM files**.
+
